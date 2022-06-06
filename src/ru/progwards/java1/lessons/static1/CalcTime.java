@@ -58,24 +58,24 @@ class Goodies{
     }
     public static void setChild(String child) {
         {
-            masha();
+            child = null;
         }
     }
     public static void setGoodies(String goodies){
         {
-           cookie();
+            goodies = null;
         }
     }
     public static void printPresents(){
         masha();
         printPresent();
-        setGoodies (goodies);
         goodies = "леденец";
+        setGoodies (goodies);
         printPresent();
         cookie();
         printPresent();
-        setChild(child);
         child = "Пете";
+        setChild(child);
         printPresent();
     }
     public static void main(String[]args){

@@ -15,7 +15,6 @@ public class CalcTime {
         speed = 80d;
         cityFrom = "Москва";
         cityTo = "Питер";
-        printTime();
     }
 
     public static void LissabonToVladivostok() {
@@ -23,7 +22,6 @@ public class CalcTime {
         speed = 75d;
         cityFrom = "Лиссабон";
         cityTo = "Владивосток";
-        printTime();
     }
 
     public static void MurmanskToAlmata() {
@@ -31,7 +29,6 @@ public class CalcTime {
         speed = 60d;
         cityFrom = "Мурманск";
         cityTo = "Алмата";
-        printTime();
     }
 
     public static void printTimes() {
@@ -44,9 +41,6 @@ public class CalcTime {
     }
 
     public static void main(String[] args) {
-        MoscowToPiter();
-        LissabonToVladivostok();
-        MurmanskToAlmata();
         printTimes();
     }
 }
@@ -62,11 +56,15 @@ class Goodies{
     public static void cookie(){
         goodies = "печеньку";
     }
-    public static void setChild(String child){
-        masha();
+    public static void setChild(String child) {
+        {
+            masha();
+        }
     }
     public static void setGoodies(String goodies){
-        cookie();
+        {
+           cookie();
+        }
     }
     public static void printPresents(){
         masha();

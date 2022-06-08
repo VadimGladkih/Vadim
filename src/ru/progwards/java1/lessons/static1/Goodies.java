@@ -17,11 +17,11 @@ public class Goodies {
     }
 
     public static void setChild(String child) {
-        Goodies.child = child;
+        Goodies.masha();
     }
 
     public static void setGoodies(String goodies) {
-        Goodies.goodies = goodies;
+        Goodies.cookie();
     }
 
     public static void printPresents() {

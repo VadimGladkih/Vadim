@@ -9,7 +9,10 @@ public class Distance3D {
     static double z2;
 
     public static double distance(double x1, double y1, double z1, double x2, double y2, double z2) {
-        return Math.sqrt((x1 - y1) * (x1 - y1) + (z1 - x2) * (z1 - x2) + (y2 - z2) * (y2 - z2));
+        double a = x1 - y1;
+        double b = z1 - x2;
+        double c = y2 - z2;
+        return Math.sqrt(a*a+b*b+c*c);
     }
 
     public static void main(String[] args) {

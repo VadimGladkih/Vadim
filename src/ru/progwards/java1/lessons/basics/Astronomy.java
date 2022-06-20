@@ -9,24 +9,19 @@ public class Astronomy {
         return Double.valueOf(4 * pi * Math.pow(r,2));
     }
     public static Double earthSquare(){
-        System.out.println(sphereSquare(ERATH_RADIUS));
-        return null;
+        return sphereSquare(ERATH_RADIUS);
     }
     public static Double mercurySquare(){
-        System.out.println(sphereSquare(MERCURY_RADIUS));
-        return null;
+        return sphereSquare(MERCURY_RADIUS);
     }
     public static Double jupiterSquare(){
-        System.out.println(sphereSquare(JUPITER_RADIUS));
-        return null;
+        return sphereSquare(JUPITER_RADIUS);
     }
     public static Double earthVsMercury(){
-        System.out.println(sphereSquare(ERATH_RADIUS)/sphereSquare(MERCURY_RADIUS));
-        return null;
+        return sphereSquare(ERATH_RADIUS)/sphereSquare(MERCURY_RADIUS);
     }
     public static Double earthVsJupiter(){
-        System.out.println(sphereSquare(ERATH_RADIUS)/sphereSquare(JUPITER_RADIUS));
-        return null;
+        return sphereSquare(ERATH_RADIUS)/sphereSquare(JUPITER_RADIUS);
     }
 
 

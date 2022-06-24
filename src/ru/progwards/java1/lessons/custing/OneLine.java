@@ -18,7 +18,7 @@ public class OneLine {
     }
 
     public static void main(String[] args) {
-        System.out.println(strValue("value"));
+        System.out.println(strValue("\"value\""));
         System.out.println(intValue("radius",123));
         System.out.println(square(123));
         System.out.println(sum(123, 321));

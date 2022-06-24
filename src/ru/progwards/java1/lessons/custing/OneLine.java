@@ -2,24 +2,24 @@ package ru.progwards.java1.lessons.custing;
 
 public class OneLine {
     public static String strValue(String value) {
-        return "Передана строка со значением "+value;
+        return "Передана строка со значением " + "\"" + value + "\"";
     }
 
     public static String intValue(String variable, int value) {
-        return "Значение "+variable+" равно "+value;
+        return "Значение " + variable + " равно " + value;
     }
 
     public static String square(int n) {
-        return "Число "+n+ " в квадрате равно "+String.valueOf(n*n);
+        return "Число " + n + " в квадрате равно " + String.valueOf(n * n);
     }
 
     public static String sum(int n, int m) {
-        return "Сумма " + n + " и " + m + " равна " + String.valueOf(n+m);
+        return "Сумма " + n + " и " + m + " равна " + String.valueOf(n + m);
     }
 
     public static void main(String[] args) {
-        System.out.println(strValue("\"Я из лесу вышел. Был сильный мороз.\""));
-        System.out.println(intValue("radius",123));
+        System.out.println(strValue("value"));
+        System.out.println(intValue("radius", 123));
         System.out.println(square(123));
         System.out.println(sum(123, 321));
     }

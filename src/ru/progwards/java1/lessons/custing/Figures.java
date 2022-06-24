@@ -12,14 +12,10 @@ public class Figures {
         double p = (k+k+k)/2;
         return Math.sqrt(p*(p-k)*(p-k)*(p-k));
     }
-    public static double squareVsTraiange(double p){
-        return square()/triangle();
-    }
 
     public static void main(String[] args) {
         System.out.println(circle(10));
         System.out.println(square(10));
         System.out.println(triangle(12));
-        System.out.println(squareVsTraiange());
     }
 }

@@ -23,11 +23,11 @@ public class Figures {
     }
 
     public static void main(String[] args) {
-        System.out.println(circle(10));
-        System.out.println(square(10));
-        System.out.println(triangle(12));
-        System.out.println(squareVsTraiange(21));
-        System.out.println(squareVsCircle(32));
-        System.out.println(triangleVsCircle(32));
+    circle(10);
+    square(10);
+    triangle(12);
+    squareVsTraiange(21);
+    squareVsCircle(32);
+    triangleVsCircle(32);
     }
 }

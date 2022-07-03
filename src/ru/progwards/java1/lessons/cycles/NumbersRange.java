@@ -27,14 +27,14 @@ public class NumbersRange {
         for (i = start; i <= finish; i++) {
             sum += i++;
         }
-    return sum;
+        return sum;
     }
 
 
     public static void main(String[] args) {
         System.out.println(sumNumbers(11, 18));
         System.out.println(sumOdd(11, 18));
-        System.out.println(sumEvenIdx(11,18));
+        System.out.println(sumEvenIdx(11, 18));
     }
 
 

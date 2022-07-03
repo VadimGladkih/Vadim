@@ -2,23 +2,23 @@ package ru.progwards.java1.lessons.cycles;
 
 public class GoldenFibo {
     public static int fiboNumber(int n) {
-        int sum =1;
-        int n1=1;
-        int n2=1;
-        for (int i =3;i<=n;++i){
-            sum=n1+n2;
-            n1=n2;
-            n2=sum;
+        int sum = 1;
+        int n1 = 1;
+        int n2 = 1;
+        for (int i = 3; i <= n; ++i) {
+            sum = n1 + n2;
+            n1 = n2;
+            n2 = sum;
         }
         return sum;
     }
-    public static boolean isGoldenTriangle(int a, int b, int c){
-        if (a==b&&b==c&&c==a) {
+
+    public static boolean isGoldenTriangle(int a, int b, int c) {
+        if (a == b || b == c || a == c) {
             return true;
-        }
-        if (a/b>=1.61703&&a/b<=1.61903&&b/c>=1.61703&&b/c<=1.61903&&a/c>=1.61703&&a/c<=1.61903) {
+        } else if (a / b >= 1.61703 && a / b <= 1.61903 && b / c >= 1.61703 && b / c <= 1.61903 && a / c >= 1.61703 && a / c <= 1.61903) {
             return true;
-        }else {
+        } else {
             return false;
         }
 
@@ -26,6 +26,6 @@ public class GoldenFibo {
 
     public static void main(String[] args) {
         System.out.println(fiboNumber(10));
-        System.out.println(isGoldenTriangle(34,34,55));
+        System.out.println(isGoldenTriangle(55, 34, 34));
     }
 }

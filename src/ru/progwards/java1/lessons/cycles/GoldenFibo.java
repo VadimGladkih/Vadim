@@ -14,14 +14,13 @@ public class GoldenFibo {
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c) {
-        if (a == b && b == c && a == c) {
+        if (a==b&&a!=c&&b!=c) {
+        } else if (a/b>=1.61703&&a/b<=1.61903||b/a>=1.61703&&b/a<=1.61903) {
             return true;
-        } else if (a / b >= 1.61703 && a / b <= 1.61903 && b / c >= 1.61703 && b / c <= 1.61903 && a / c >= 1.61703 && a / c <= 1.61903) {
-            return true;
-        } else {
+        }else {
             return false;
         }
-
+        return true;
     }
 
     public static void main(String[] args) {

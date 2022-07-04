@@ -14,8 +14,8 @@ public class GoldenFibo {
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c) {
-        if (a==b&&a!=c&&b!=c) {
-        } else if (a/b>=1.61703&&a/b<=1.61903||b/a>=1.61703&&b/a<=1.61903) {
+        if (a==b&&a!=c||c==b&&c!=a||a==c&&a!=b) {
+        } else if (a/c>=1.61703&&a/c<=1.61903||b/c>=1.61703&&b/c<=1.61903) {
             return true;
         }else {
             return false;
@@ -25,6 +25,6 @@ public class GoldenFibo {
 
     public static void main(String[] args) {
         System.out.println(fiboNumber(10));
-        System.out.println(isGoldenTriangle(34, 34, 55));
+        System.out.println(isGoldenTriangle(34, 55, 55));
     }
 }

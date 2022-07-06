@@ -22,7 +22,7 @@ public class GoldenFibo {
         double ac = (double) a / c;
         double ab = (double) a / b;
         double ba = (double) b / a;
-        return TriangleInfo.isIsoscelesTriangle(a, b, c) &&
+        return
                 (
                         ((a == b) && (V1 <= ac) && (V2 >= ac))||
                         ((a == c) && (V1 <= ab) && (V2 >= ab))||

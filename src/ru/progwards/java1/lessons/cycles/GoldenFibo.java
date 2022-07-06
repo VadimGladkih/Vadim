@@ -31,7 +31,7 @@ public class GoldenFibo {
     }
 
     public static void main(String[] args) {
-        System.out.println(fiboNumber(10));
+        System.out.println(fiboNumber(15));
         System.out.println(isGoldenTriangle(34, 34, 55));
     }
 }

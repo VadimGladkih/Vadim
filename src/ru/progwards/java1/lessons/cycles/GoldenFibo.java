@@ -1,6 +1,11 @@
 package ru.progwards.java1.lessons.cycles;
 
+import ru.progwards.java1.lessons.compare.TriangleInfo;
+
 public class GoldenFibo {
+    static final double V1 = 1.61703;
+    static final double V2 = 1.61903;
+
     public static int fiboNumber(int n) {
         int sum = 1;
         int n1 = 1;
@@ -14,13 +19,15 @@ public class GoldenFibo {
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c) {
-        if (a==b&&a!=c||c==b&&c!=a||a==c&&a!=b) {
-        } else if (a/c>=1.61703&&a/c<=1.61903||b/c>=1.61703&&b/c<=1.61903||a/b>=1.61703&&a/b<=1.61903) {
-            return true;
-        }else {
-            return false;
-        }
-        return true;
+        double ac = (double) a / c;
+        double ab = (double) a / b;
+        double ba = (double) b / a;
+        return TriangleInfo.isIsoscelesTriangle(a, b, c) &&
+                (
+                        ((a == b) && (V1 <= ac) && (V2 >= ac))||
+                        ((a == c) && (V1 <= ab) && (V2 >= ab))||
+                        ((c == b) && (V1 <= ba) && (V2 >= ba))
+                );
     }
 
     public static void main(String[] args) {

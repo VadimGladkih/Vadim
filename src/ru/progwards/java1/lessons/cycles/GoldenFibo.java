@@ -1,6 +1,5 @@
 package ru.progwards.java1.lessons.cycles;
 
-import ru.progwards.java1.lessons.compare.TriangleInfo;
 
 public class GoldenFibo {
     static final double V1 = 1.61703;

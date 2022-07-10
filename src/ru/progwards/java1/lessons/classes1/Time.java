@@ -30,6 +30,9 @@ public class Time {
     public int toSeconds(){
         return (this.hours * 60 * 60) + (this.minutes * 60 )+this.seconds;
     }
+    public int secondsBetween(Time time){
+        return this.seconds;
+    }
 
     public static void main(String[] args) {
         Time time1 = new Time(1, 30, 5);

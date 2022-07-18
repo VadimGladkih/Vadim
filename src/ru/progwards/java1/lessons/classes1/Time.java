@@ -33,14 +33,13 @@ public class Time {
     }
 
     public int secondsBetween(Time time) {
-        return (this.hours * 60 * 60) + (this.minutes * 60) + this.seconds;
+        return Math.abs(this.hours * 60 * 60 + this.minutes * 60 + this.seconds - time.toSeconds());
     }
 
     public static void main(String[] args) {
-        Time time1 = new Time(6, 30, 36);
-        Time time = new Time(6, 13, 9);
-        time1.toString();
-        time1.toSeconds();
-        System.out.println(time1.secondsBetween(time1)- time.secondsBetween(time));
+        Time t1 = new Time(3, 35, 6);
+        System.out.println(t1);
+        Time t2 = new Time(4, 55, 6);
+        System.out.println(t1.secondsBetween(t2));
     }
 }

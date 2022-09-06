@@ -1,34 +1,44 @@
 package ru.progwards.java1.lessons.classes1;
 
 public class ComplexNum {
-    int a;
-    int b;
+    private int a;
+    private int b;
 
-    public ComplexNum(int a, int b){
+    public ComplexNum(int a, int b) {
         this.a = a;
         this.b = b;
     }
-    public String toString(){
-        String a = Integer.toString(this.a);
-        String b = Integer.toString(this.b);
-        return a+"+"+b+"i";
-    }
-    int c;
-    int d;
-    public ComplexNum num(int c , int b){
-        this.c = c;
-        this.b = b;
-        return null;
-    }
-    public ComplexNum add(ComplexNum num){
-       // return (a+"+"+b+"i")+(c+"+"+d+"i")=(a+"+"+c)+(b+ "+" + d)+"i";
-    return null;
+
+    public int getA() {
+        return a;
     }
 
+    public int getB() {
+        return b;
+    }
+
+    public String toString() {
+        Integer.toString(a, b);
+        return a + " + " + b + "i ";
+    }
+
+    public ComplexNum add(ComplexNum num) {
+        return new ComplexNum(a + num.getA(), b + num.getB());
+    }
+
+    public ComplexNum sub(ComplexNum num) {
+        return new ComplexNum(a - num.getA(), b - num.getB());
+    }
+
+    public ComplexNum mul(ComplexNum num) {
+        return new ComplexNum(a * num.getA(), b * num.getB());
+    }
+    public ComplexNum div(ComplexNum num){
+        return new ComplexNum(a / num.getA(), b / num.getB());
+    }
 
     public static void main(String[] args) {
-        ComplexNum num1 = new ComplexNum(1,56);
-        //ComplexNum num2 = new ComplexNum(num(1,36));
-        System.out.println(num1.toString());
+        ComplexNum n1 = new ComplexNum(1, 56);
+        System.out.println(n1.toString());
     }
 }

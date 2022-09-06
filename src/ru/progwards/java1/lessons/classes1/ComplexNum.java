@@ -18,7 +18,8 @@ public class ComplexNum {
     }
 
     public String toString() {
-        Integer.toString(a, b);
+        Integer a = Integer.valueOf(Integer.toString(this.a));
+        Integer b = Integer.valueOf(Integer.toString(this.b));
         return a + "+" + b + "i";
     }
 

@@ -19,7 +19,7 @@ public class ComplexNum {
 
     public String toString() {
         Integer.toString(a, b);
-        return a + " + " + b + "i ";
+        return a + "+" + b + "i";
     }
 
     public ComplexNum add(ComplexNum num) {

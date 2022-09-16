@@ -1,41 +1,32 @@
 package ru.progwards.java1.lessons.classes1;
 
 public class ComplexNum {
-    private int a;
-    private int b;
+    private final int a;
+    private final int b;
 
     public ComplexNum(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
-    public int getA() {
-        return a;
-    }
-
-    public int getB() {
-        return b;
-    }
-
     public String toString() {
-        Integer a = Integer.valueOf(Integer.toString(this.a));
-        Integer b = Integer.valueOf(Integer.toString(this.b));
+        Integer.toString(a, b);
         return a + "+" + b + "i";
     }
 
     public ComplexNum add(ComplexNum num) {
-        return new ComplexNum(a + num.getA(), b + num.getB());
+        return new ComplexNum(this.a+num.a,this.b+num.b);
     }
 
     public ComplexNum sub(ComplexNum num) {
-        return new ComplexNum(a - num.getA(), b - num.getB());
+        return new ComplexNum(this.a-num.a, this.b-num.b);
     }
 
     public ComplexNum mul(ComplexNum num) {
-        return new ComplexNum(a * num.getA(), b * num.getB());
+        return new ComplexNum(this.a*num.b,this.b*num.a);
     }
     public ComplexNum div(ComplexNum num){
-        return new ComplexNum(a / num.getA(), b / num.getB());
+        return new ComplexNum(this.a/num.b,this.b/num.a);
     }
 
     public static void main(String[] args) {

@@ -19,19 +19,20 @@ public class ComplexNum {
     }
 
     public ComplexNum sub(ComplexNum num) {
-        return new ComplexNum((this.a*num.a)-(this.b*num.b), (this.b*num.b)+(this.a*num.a));
+        return new ComplexNum(this.a+num.a,this.b+num.b);
     }
 
     public ComplexNum mul(ComplexNum num) {
-        return new ComplexNum(this.a-this.b,this.b*num.b);
+        return new ComplexNum((this.a*num.a)-(this.b*num.b), (this.b*num.b)+(this.a*num.a));
     }
     public ComplexNum div(ComplexNum num){
-        return new ComplexNum(this.a/num.b,this.b/num.a);
+        return new ComplexNum((this.a*num.a+this.b*num.b)/(num.a*num.a+num.b/num.b),(this.b*num.a-this.a*num.b)/(num.a*num.a+num.b*num.b));
     }
 
     public static void main(String[] args) {
         ComplexNum n1 = new ComplexNum(1, 56);
         System.out.println(n1.toString());
-        System.out.println(new ComplexNum(1, 1).mul(new ComplexNum(99, 99)).toString());
+        System.out.println(new ComplexNum(99, 99).mul(new ComplexNum(1, 1)).toString());
+        System.out.println(new ComplexNum(1000, 1000).div(new ComplexNum(100, 100)).toString());
     }
 }

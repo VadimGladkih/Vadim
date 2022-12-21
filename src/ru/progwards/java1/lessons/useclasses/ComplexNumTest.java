@@ -17,6 +17,6 @@ public class ComplexNumTest {
         System.out.println("частное num1 и num3 равно " + num1.div(num3));
         System.out.println("частное num2 и num3 равно " + num2.div(num3));
         System.out.println("произведение num0 и num3 равно " + num0.mul(num3));
-        System.out.println( "произведение num1 и num2 равно " + num1.mul(num2));
+        System.out.println("произведение num1 и num2 равно " + num1.mul(num2));
     }
 }

@@ -13,23 +13,29 @@ public class CountTest {
     }
 
     public static void testDec(int count) {
-        Count count2 = new Count();
-        while (count2.getCount() > count) {
-            count2.dec();
-            System.out.print(count2.getCount() + " ");
+        Count count1 = new Count(count);
+        while (true) {
+            boolean result = count1.dec();
+            System.out.print(count1.getCount() + " ");
+            if (result) {
+                if (count > 0) {
+                    System.out.println();
+                    System.out.print("count равен 0");
+                }
+                break;
+            }
         }
-        if (count >= 0)
-            System.out.println("count равен 0");
+        System.out.println();
         System.out.println("тест dec окончен");
-
-
     }
 
 
+
+
     public static void main(String[] args) {
-       /* testInc(7);
+       testInc(7);
         testInc(0);
-        testInc(-1);*/
-        testDec(-5);
+        testInc(-1);
+        testDec(9);
     }
 }

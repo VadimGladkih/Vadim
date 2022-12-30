@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.inheritance;
 
-public abstract class Time {
+public class Time {
     int hours;
     int minutes;
     int seconds;
@@ -32,7 +32,9 @@ public abstract class Time {
         return (this.hours * 60 * 60) + (this.minutes * 60) + this.seconds;
     }
 
-    public abstract TimeZone getTimeZone();
+    public TimeZone getTimeZone() {
+        return null;
+    }
 
     public int secondsBetween(Time time) {
         return Math.abs(this.hours * 60 * 60 + this.minutes * 60 + this.seconds - time.toSeconds());

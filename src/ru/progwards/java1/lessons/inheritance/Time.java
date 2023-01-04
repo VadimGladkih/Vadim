@@ -32,9 +32,9 @@ public class Time {
         return (this.hours * 60 * 60) + (this.minutes * 60) + this.seconds;
     }
 
-   /* public TimeZone getTimeZone() {
+    public TimeZone getTimeZone() {
         return null;
-    }*/
+    }
 
     public int secondsBetween(Time time) {
         return Math.abs(this.hours * 60 * 60 + this.minutes * 60 + this.seconds - time.toSeconds());

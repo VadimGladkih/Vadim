@@ -5,9 +5,10 @@ public class ZonedTime extends Time {
 
     public ZonedTime(int hours, int minutes, int seconds) {
         super(hours, minutes, seconds);
-        this.hours = hours;
+        this.zone = getTimeZone();
+        /*this.hours = hours;
         this.minutes = minutes;
-        this.seconds = seconds;
+        this.seconds = seconds;*/
     }
 
     public ZonedTime(int hours, int minutes, int seconds, TimeZone zone) {
@@ -15,7 +16,7 @@ public class ZonedTime extends Time {
         this.zone = zone;
     }
 
-    //@Override
+    @Override
     public TimeZone getTimeZone() {
         return zone;
     }
@@ -23,7 +24,7 @@ public class ZonedTime extends Time {
     @Override
     public int secondsBetween(Time time) {
         TimeZone k1 = this.getTimeZone();
-        TimeZone k2 = this.getTimeZone();
+        TimeZone k2 = time.getTimeZone();
         int sdvigk1, sdvigk2;
 
         if (k1 == null)

@@ -19,10 +19,11 @@ public abstract class Animal {
         this.weight = weight;
     }
     public double getWeight(){
-        return this.weight;
+        return weight;
     }
     int compareTo(Animal animal){
-        return weight.compareTo(weight);
+        int result =  weight.compareTo(weight);
+        return result;
     }
     public boolean equals(Object o){
         name.equals(name);

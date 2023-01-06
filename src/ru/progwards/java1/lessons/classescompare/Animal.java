@@ -32,10 +32,16 @@ public abstract class Animal {
 
 
     }
-    public boolean equals(Object o){
-        name.equals(name);
-        kind().equals(kind());
-        weight.equals(weight);
-        return true;
+    public boolean equals(Object o) {
+        if(this.name == o){
+            return true;
+        }if (kind() == o){
+            return true;
+        }if (this.weight == o){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }

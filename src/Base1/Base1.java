@@ -1,5 +1,7 @@
 package Base1;
 
+import java.util.Objects;
+
 public class Base1{
     public static void printJava(){
         String a = "Хорошо идут дела";
@@ -32,6 +34,7 @@ public class Base1{
         return result;
     }
 
+
     public static void main(String[]args){
         printJava();
         printJava("Чтобы Java понимать", "Надо функции писать");
@@ -41,5 +44,6 @@ public class Base1{
         String s = plusJava("объектно-ориентированный");
         System.out.println(s);
         System.out.println(plusJava("очень интересный"));
+
     }
 }

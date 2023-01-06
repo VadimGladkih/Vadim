@@ -30,18 +30,24 @@ public abstract class Animal {
             return 1;
         }
 
-
     }
     public boolean equals(Object o) {
-        if(this.name == o){
-            return true;
-        }if (kind() == o){
-            return true;
-        }if (this.weight == o){
-            return true;
-        }else{
-            return false;
-        }
-
+        return (this.name.equals(o))&&(this.kind().equals(o))&&(this.weight.equals(o));
+    }
+    enum FoodKind{
+        HAY,
+        CORN,
+    }
+    abstract public FoodKind getFoodKind();
+    abstract public double getFoodCoeff();
+    public double calculateFoodWeight(){
+        return getWeight() * getFoodCoeff();
+    }
+    public double calculateFoodPrice(){
+       if (getFoodKind() ==FoodKind.HAY){
+           return calculateFoodWeight() * 2;
+       }else{
+           return getWeight() * 15;
+       }
     }
 }

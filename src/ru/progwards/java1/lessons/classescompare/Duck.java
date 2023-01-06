@@ -12,4 +12,12 @@ public class Duck extends Animal {
     public String say(){
         return "кря-кря";
     }
+    @Override
+    public FoodKind getFoodKind(){
+        return FoodKind.CORN;
+    }
+    @Override
+    public double getFoodCoeff(){
+        return 0.04;
+    }
 }

@@ -12,4 +12,12 @@ public class Hamster extends Animal {
     public String say(){
         return"хрум-хрум-хрум";
     }
+    @Override
+    public FoodKind getFoodKind(){
+        return FoodKind.CORN;
+    }
+    @Override
+    public double getFoodCoeff(){
+        return  0.06;
+    }
 }

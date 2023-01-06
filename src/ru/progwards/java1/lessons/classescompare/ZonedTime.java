@@ -1,14 +1,11 @@
 package ru.progwards.java1.lessons.classescompare;
 
-public class ZonedTime extends Time {
+class ZonedTime extends Time {
     TimeZone zone;
 
     public ZonedTime(int hours, int minutes, int seconds) {
         super(hours, minutes, seconds);
         this.zone = getTimeZone();
-        /*this.hours = hours;
-        this.minutes = minutes;
-        this.seconds = seconds;*/
     }
 
     public ZonedTime(int hours, int minutes, int seconds, TimeZone zone) {
@@ -35,14 +32,11 @@ public class ZonedTime extends Time {
             sdvigk2 = 0;
         else
             sdvigk2 = Math.abs(k2.hours * 60 * 60 + k2.minutes * 60);
+
         return super.secondsBetween(time) + Math.abs(sdvigk1 - sdvigk2);
     }
 
     public static void main(String[] args) {
-        ZonedTime zt1 = new ZonedTime(16, 10, 42, new TimeZone(3));
-        ZonedTime zt2 = new ZonedTime(18, 7, 15, new TimeZone(2));
-        System.out.println(zt1.secondsBetween(zt2));
-        ZonedTime zt3 = new ZonedTime(7, 58, 8, new TimeZone(0, 42));
-        System.out.println(zt3.secondsBetween(zt1));
+
     }
 }

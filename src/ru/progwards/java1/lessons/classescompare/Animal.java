@@ -22,8 +22,15 @@ public abstract class Animal {
         return weight;
     }
     int compareTo(Animal animal){
-        int result =  weight.compareTo(weight);
-        return result;
+        if (this.weight == animal.weight){
+            return 0;
+        } else if (this.weight < animal.weight) {
+            return -1;
+        }else {
+            return 1;
+        }
+
+
     }
     public boolean equals(Object o){
         name.equals(name);

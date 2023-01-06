@@ -47,7 +47,11 @@ public abstract class Animal {
        if (getFoodKind() ==FoodKind.HAY){
            return calculateFoodWeight() * 2;
        }else{
-           return getWeight() * 15;
+           return calculateFoodWeight() * 15;
        }
+    }
+
+    public static void main(String[] args) {
+
     }
 }

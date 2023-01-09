@@ -24,7 +24,7 @@ public abstract class Animal {
     int compareTo(Animal animal){
         if (this.weight == animal.weight){
             return 0;
-        } else if (this.weight < animal.weight) {
+        }if (this.weight < animal.weight) {
             return -1;
         }else {
             return 1;

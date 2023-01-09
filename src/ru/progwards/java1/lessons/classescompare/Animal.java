@@ -41,9 +41,10 @@ public abstract class Animal {
     abstract public FoodKind getFoodKind();
     abstract public double getFoodCoeff();
     public double calculateFoodWeight(){
-        return getWeight() * getFoodCoeff();
+        return weight * getFoodCoeff();
     }
     public double calculateFoodPrice(){
+       // int price;
        if (getFoodKind() ==FoodKind.HAY){
            return calculateFoodWeight() * 2;
        }else{

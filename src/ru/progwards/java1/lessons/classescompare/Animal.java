@@ -25,9 +25,9 @@ public abstract class Animal {
         if (this.weight == animal.weight){
             return 0;
         }if (this.weight < animal.weight) {
-            return -1;
-        }else {
             return 1;
+        }else {
+            return -1;
         }
 
     }

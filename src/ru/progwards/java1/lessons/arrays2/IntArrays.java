@@ -7,6 +7,9 @@ public class IntArrays {
             if (i< a.length -1){
                 b = b + a[i] + "," + " ";
             }
+            if (i == a.length -1){
+                b += a[i] + "]";
+            }
         }
         return b;
     }

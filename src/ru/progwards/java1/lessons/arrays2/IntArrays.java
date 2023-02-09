@@ -2,10 +2,13 @@ package ru.progwards.java1.lessons.arrays2;
 
 public class IntArrays {
     public static String toString(int []a){
-        for (int i : a){
-            System.out.println(i);
+        String b = "[";
+        for (int i = 0; i< a.length; i++){
+            if (i< a.length -1){
+                b = b + a[i] + "," + " ";
+            }
         }
-        return String.valueOf(a);
+        return b;
     }
 
     public static void main(String[] args) {
